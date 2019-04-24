@@ -1,0 +1,78 @@
+
+<div class="chat-popup" id="chatwindow">
+ <div class="container clearfix" id="chat-container">
+    <div class="chat" id="chat-box">
+      <div class="chat-header clearfix">
+        <img src="https://dcassetcdn.com/design_img/2779177/591638/591638_15209895_2779177_eb4b7a2a_image.jpg" alt="avatar" />
+        
+        <div class="chat-about">
+          <div class="chat-with">Skill bot</div>
+          <div class="chat-num-messages">{{ msg }}</div>
+        </div>
+        <i class="fa fa-star"(click)="closechat()"></i>
+      </div> 
+      
+      <div class="chat-history" id = "msgbox">
+        <ul>
+          <li class="clearfix">
+            <div class="message-data align-right">
+              <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+              <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+              
+            </div>
+            <div class="message other-message float-right">
+              Hi Sankii, how are you? How is the project coming along?
+            </div>
+          </li>
+          <li class="clearfix" *ngFor="let item of chatArray">
+            <div >
+              <div class="message-data align-right">
+                <span class="message-data-time" >{{ date }}</span> &nbsp; &nbsp;
+                <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+              </div>
+              <div class="message other-message float-right" >
+                {{ item }}
+              </div>
+            <!-- </div>
+          </li>
+          <li class="clearfix" *ngFor="let item of chatArray">
+            <div > -->
+              <div class="message-data align-left">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Sankii</span>
+                <span class="message-data-time">{{ date }}</span>&nbsp;&nbsp;
+              </div>
+              <div class="message my-message" id="msg" >
+                {{ item }}
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <li>
+          
+        </li>
+      </div> <!-- end chat-history -->
+      <script>
+        var arr = getElementById("msg").value
+        alert("msg chk ", arr)
+      </script>
+      <div class="chat-message clearfix">
+        <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3" [(ngModel)]="str" (keydown.enter)="sendMessage($event)"></textarea>   
+        <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+        <i class="fa fa-file-image-o"></i>
+        
+        <button (click)="sendMessage()">Send</button>
+        <button (click)="testfinish()">Chatbot</button>
+        <button (click)="test()">Test</button>
+        <!-- <button (click)='send()'>Button Click</button> -->
+      </div> <!-- end chat-message -->
+      
+      
+    </div> <!-- end chat -->
+    
+  </div> <!-- end container -->
+  
+</div>  
+<button class="btn btn-outline-neutral btn-round" id="chatbutton" (click)="playAudio();openchat()"><i class="fa fa-play"></i></button>
+
+

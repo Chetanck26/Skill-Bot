@@ -1,0 +1,41 @@
+{
+    "user_login":[
+        {
+            "email":{},
+            "password":{}
+        }
+    ],
+    
+    "user_info":[
+        {
+            "langauage_to_test":{},
+            "level_of_your_language":{}
+        }
+    ],
+ 
+    "user_registration":[
+        {
+            "fname":{},
+            "lname":{}
+        },
+        
+        {
+            "email_id":{},
+            "mobile":{}
+        },
+        {
+            "otp":{ 
+                
+            }
+        }
+    ],
+    "fallback": [
+        "Please provide valid data for <<[KEY]>>",
+        "Invalid data for <<[KEY]>>",
+        "Sorry! Unable to understand <<[KEY]>>"
+    ],
+    "responses": [
+        "Please provide  data for <<[KEY]>>",
+        "Give me data for <<[KEY]>>"
+    ]   
+}

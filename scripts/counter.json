@@ -1,0 +1,56 @@
+{
+    "user_login":[
+        {
+            "email_id":{}
+        }
+    ],
+
+    "learn_module":[
+        {
+            "perform_learn":{}
+        }
+    ],
+    "demographic_test":[
+        {
+            "perform_demographic_test": {}
+        }
+    ],
+    
+    "test_module": [
+        {
+            "language_to_test": {}
+        }
+    ],
+    
+    "user_info":[
+        {
+            "language_to_test":{ "switch_context": "demographic_test"}
+        }
+    ],
+ 
+    "user_registration":[
+        {
+            "first_name":{},
+            "last_name":{}
+        },
+        
+        {
+            "email_id":{},
+            "mobile":{}
+        },
+        {
+            "otp":{ 
+                "switch_context": "user_info"
+            }
+        }
+    ],
+    "fallback": [
+        "Please provide valid data for <<[KEY]>>",
+        "Invalid data for <<[KEY]>>",
+        "Sorry! Unable to understand <<[KEY]>>"
+    ],
+    "responses": [
+        "Please provide me your <<[KEY]>>",
+        "Give me <<[KEY]>>"
+    ]   
+}
